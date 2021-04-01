@@ -46,6 +46,5 @@ spec:
           name: data-volume
       volumes:
       - name: data-volume
-        hostPath:
-          path: /data
-          type: DirectoryOrCreate
+        persistentVolumeClaim:
+          claimName: mysql-pvc
